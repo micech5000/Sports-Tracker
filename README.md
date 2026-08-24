@@ -1,3 +1,5 @@
+Версия для Windows x64 Sports Tracker Setup 0.2.0 находится в файлах
+Version for Windows x64 Sport Tracker Setup 0.2.0 locketed in files
 # Sports Tracker
 
 Windows desktop application for live, upcoming and finished sports events.
@@ -63,4 +65,5 @@ pnpm --filter sports-tracker-desktop typecheck
 pnpm --filter sports-tracker-backend typecheck
 pnpm --filter sports-tracker-desktop lint
 ```
-Версия для Windows x64 Sports Tracker Setup 0.2.0 
+
+

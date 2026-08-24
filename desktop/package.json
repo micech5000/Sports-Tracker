@@ -1,0 +1,60 @@
+{
+  "name": "sports-tracker-desktop",
+  "version": "0.2.0",
+  "private": true,
+  "main": "dist-electron/electron/main.js",
+  "scripts": {
+    "dev": "concurrently -k \"vite --host 127.0.0.1\" \"tsc -p tsconfig.node.json --watch\" \"wait-on tcp:5173 file:dist-electron/electron/main.js && electron .\"",
+    "build": "tsc -p ../backend/tsconfig.json --outDir backend && tsc -p tsconfig.node.json && vite build",
+    "typecheck": "tsc -p tsconfig.json --noEmit && tsc -p tsconfig.node.json --noEmit",
+    "lint": "eslint .",
+    "package": "npm run build && electron-builder --win nsis"
+  },
+  "dependencies": {
+    "cors": "latest",
+    "dotenv": "latest",
+    "express": "latest",
+    "express-rate-limit": "latest",
+    "helmet": "latest",
+    "react": "latest",
+    "react-dom": "latest"
+  },
+  "devDependencies": {
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "@eslint/js": "latest",
+    "@typescript-eslint/eslint-plugin": "latest",
+    "@typescript-eslint/parser": "latest",
+    "@vitejs/plugin-react": "latest",
+    "concurrently": "latest",
+    "electron": "latest",
+    "electron-builder": "latest",
+    "eslint": "latest",
+    "typescript": "^6.0.0",
+    "vite": "latest",
+    "wait-on": "latest"
+  },
+  "build": {
+    "appId": "com.sportstracker.desktop",
+    "productName": "Sports Tracker",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist/**/*",
+      "dist-electron/**/*",
+      "backend/**/*"
+    ],
+    "extraResources": [
+      {
+        "from": "../backend/.env",
+        "to": "backend/.env"
+      }
+    ],
+    "win": {
+      "signAndEditExecutable": false,
+      "target": ["nsis"]
+    }
+  }
+}

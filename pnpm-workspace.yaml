@@ -1,0 +1,6 @@
+packages:
+  - desktop
+  - backend
+allowBuilds:
+  electron-winstaller: true
+  esbuild: true

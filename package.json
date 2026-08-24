@@ -1,0 +1,19 @@
+{
+  "name": "sports-tracker",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Windows desktop sports tracker built with Electron, React and TypeScript.",
+  "workspaces": [
+    "desktop",
+    "backend"
+  ],
+  "scripts": {
+    "dev:desktop": "npm --workspace desktop run dev",
+    "dev:backend": "npm --workspace backend run dev",
+    "build:desktop": "npm --workspace desktop run build",
+    "lint:desktop": "npm --workspace desktop run lint",
+    "typecheck:desktop": "npm --workspace desktop run typecheck",
+    "build:backend": "npm --workspace backend run build",
+    "typecheck:backend": "npm --workspace backend run typecheck"
+  }
+}

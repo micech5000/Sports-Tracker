@@ -1,0 +1,10 @@
+node_modules/
+dist/
+dist-electron/
+release/
+desktop/release*/
+desktop/backend/
+.env
+.env.*
+!.env.example
+*.log

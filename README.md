@@ -63,3 +63,4 @@ pnpm --filter sports-tracker-desktop typecheck
 pnpm --filter sports-tracker-backend typecheck
 pnpm --filter sports-tracker-desktop lint
 ```
+Версия для Windows x64 Sports Tracker Setup 0.2.0 
